@@ -8,7 +8,8 @@ Câu A1.1:
  +trình duyệt kiểm tra tính bảo mật và tạo kết nối
  + trình duyệt gửi http reques(muốn mở trang chủ shoppe)-> server xử lý và phản hồi gồm mã nguồn của shoppe.vn 
  + trình duyệt đọc mã HTML, tải thêm css, javaScript, hình ảnh, sau đó ghép lại tất cả để đưa ra giao diện hoàn chỉnh của shoppe.vn
-A1.2
+
+câu A1.2
 -Trong DevTools của Chrome, tab Network cho thấy thông tin:
  + danh sách all request của trang 
  +status của từng request
@@ -18,6 +19,7 @@ A1.2
  +tổng thời gian load trang 
 -ảnh chụp tab Network:
  + ![tab Network shoppe](<Screenshot 2026-04-22 134953.png>)
+
 Câu A2:
 -code web cũ 
     <div class="header">
@@ -69,5 +71,26 @@ Câu A2:
 
     <footer>
         © 2026 ShopTLU
+
+Câu A3:
+-[mô tả code](screenshot/sreenshot-A3.png)
+-giải thích:
+ + có 3 hộp 1, 2, 3 vì có 3 thẻ <div>
+ +Text a, Text b nằm cùng 1 dòng vì cùng là thẻ <span>
+ +Text c, Text d nằm cùng 1 dòng vì cùng là thẻ <span> và text d được in đậm vì thẻ<strong>
+
+Câu A4:
+- Sự khác nhua giữa <thead>, <tbody>, <tfoot>:
+ +vai trò:
+ --<thead>: hheader(đầu bảng) tiêu đề cột
+ --<tbody>: body(thân giữa bảng) dữ liệu chính
+ --<tfoot>: footer(cuối bảng) tổng kết 
+
+-Tại sao không nên dùng TABLE để tạo layout cho trang web bởi vì:
+ + Table chỉ dùng cho dữ liệu dạng bảng(danh sách, so sánh, thống kê)
+ + Table thường có giao diện cố định, khi dùng ở màn hình nhỏ sẽ gây vỡ giao diện
+ + code dài dòng và khó sửa vì nhiều phải lồng nhiều thẻ <table>,<tr>,<td>
+ +SEO kém: công cụ tìm kiếm khó hiểu đâu là nội dung chính, menu, hay footer của trang
+ + hiệu năng kém: trình duyệt phải tính toán toàn bộ bảng rồi mới hiển thị
 
 
