@@ -6,7 +6,7 @@ Câu A1.1:
  + duyệt tìm địa chỉ IP vừa có 
  + thiết lập kết nối TCP tới server(Https- cổng 443)
  + trình duyệt kiểm tra tính bảo mật và tạo kết nối
- + trình duyệt gửi http reques(muốn mở trang chủ shoppe)-> server xử lý và phản hồi gồm mã nguồn của shoppe.vn 
+ + trình duyệt gửi http request(muốn mở trang chủ shoppe)-> server xử lý và phản hồi gồm mã nguồn của shoppe.vn 
  + trình duyệt đọc mã HTML, tải thêm css, javaScript, hình ảnh, sau đó ghép lại tất cả để đưa ra giao diện hoàn chỉnh của shoppe.vn
 
 câu A1.2
@@ -14,7 +14,7 @@ câu A1.2
  + danh sách all request của trang 
  + status của từng request
  + name file trong web(html, css, js, ảnh)
- + kích thuoicws cảu file 
+ + kích thước của file 
  + thời gian tải 
  + tổng thời gian load trang 
 -ảnh chụp tab Network:
@@ -71,6 +71,7 @@ Câu A2:
 
     <footer>
         © 2026 ShopTLU
+    </footer>    
 
 Câu A3:
 -[mô tả code](screenshot/sreenshot-A3.png)
@@ -121,12 +122,82 @@ Câu B4:
 *B4.2
 -Nội dung: Bảng so sánh các mẫu điện thoại Samsung Galaxy S26 Series, hiển thị thông tin như cấu hình, giá và các đặc điểm của sản phẩm.
 - có sử dụng thẻ <tbody> và không sử dụng <thead>
--![tab table]](<Screenshot 2026-04-25 004552.png>)
+-![tab table](<Screenshot 2026-04-25 004552.png>)
 
 *B4.3
 - Form có action: /tim-kiem
- + methot không thây khai báo
+ + method không thấy khai báo
 - input types:
  + text(nhập từ khóa tìm kiếm)
  + submit: nút button tìm kiếm 
 -![tab form](<Screenshot 2026-04-25 005315.png>)
+
+Câu C1:
+Dưới đây là cấu trúc HTML đã thiết kế:
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<header> <!-- phần đầu -->
+    <nav> <!-- menu -->
+        <a href="#">Trang chủ</a>
+    </nav>
+</header>
+
+<main>
+
+<nav aria-label="breadcrumb"> <!-- điều hướng -->
+    <ol>
+        <li>Trang chủ</li>
+        <li>Điện thoại</li>
+        <li>iPhone 16</li>
+    </ol>
+</nav>
+
+<section> <!-- sản phẩm -->
+    <section> <!-- ảnh -->
+        <img src="#" alt="">
+        <img src="#" alt="">
+        <img src="#" alt="">
+        <img src="#" alt="">
+        <img src="#" alt="">
+    </section>
+
+    <section> <!-- thông tin -->
+        <h1>Tên sản phẩm</h1>
+        <p>Giá</p>
+    </section>
+</section>
+
+<section> <!-- bảng -->
+    <table>
+        <thead>
+            <tr><th></th></tr>
+        </thead>
+        <tbody>
+            <tr><td></td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section> <!-- đánh giá -->
+    <article>...</article>
+</section>
+
+</main>
+
+<aside> <!-- sidebar -->
+</aside>
+
+<footer> <!-- phần cuối -->
+</footer>
+
+</body>
+</html>
+```
+
+Câu C2:
+-đoạn văn phản biện:
+ + Theo tôi, việc chỉ dùng <div> cho mọi thứ là chưa hợp lý, vì semantic HTML mang lại nhiều lợi ích rõ ràng. Trước hết là về SEO. Các công cụ tìm kiếm không chỉ đọc nội dung mà còn dựa vào cấu trúc HTML để hiểu trang web. Khi sử dụng các thẻ như <header>, <nav>, <main>, <article>, nội dung được phân chia rõ ràng hơn, giúp công cụ tìm kiếm xác định phần quan trọng và cải thiện thứ hạng. Nếu chỉ dùng <div>, cấu trúc trang sẽ kém rõ ràng.Thứ hai là về Accessibility. Người dùng sử dụng screen reader cần các thẻ semantic để điều hướng nhanh. Ví dụ họ có thể chuyển trực tiếp đến <nav> hoặc <main>. Nếu chỉ dùng <div>, việc truy cập sẽ khó khăn hơn, đặc biệt với người khiếm thị.Ví dụ, trong trang bán hàng, nếu mỗi sản phẩm được đặt trong <article>, thì cả công cụ tìm kiếm và screen reader đều hiểu đó là một nội dung độc lập, giúp hiển thị và truy cập tốt hơn.Tuy nhiên, <div> vẫn phù hợp khi dùng để chia layout hoặc làm container cho CSS. Vì vậy, theo tôi, nên kết hợp cả semantic HTML và <div> để đạt hiệu quả tốt nhất.
