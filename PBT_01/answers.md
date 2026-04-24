@@ -109,3 +109,24 @@ Lỗi 12: Dòng 39 — Có 2 thẻ <main> (sai semantic) — Đổi cái thứ 2
 Lỗi 13: Dòng 44 — Thẻ <p> trong footer không đóng — Thêm </p>
 Lỗi 14: Thiếu thuộc tính lang trong <html> — Thêm lang="vi"
 
+Câu B4:
+-Thẻ: <header>
+ + Ở: Phần đầu trang (chứa logo, thanh tìm kiếm)
+-Thẻ: <nav>
+ + Ở: Thanh menu danh mục sản phẩm
+-Thẻ: <section>
+ + Ở: Khu “Sản phẩm nổi bật”
+-![3 thẻ HTML5](<Screenshot 2026-04-25 002830.png>)
+
+*B4.2
+-Nội dung: Bảng so sánh các mẫu điện thoại Samsung Galaxy S26 Series, hiển thị thông tin như cấu hình, giá và các đặc điểm của sản phẩm.
+- có sử dụng thẻ <tbody> và không sử dụng <thead>
+-![tab table]](<Screenshot 2026-04-25 004552.png>)
+
+*B4.3
+- Form có action: /tim-kiem
+ + methot không thây khai báo
+- input types:
+ + text(nhập từ khóa tìm kiếm)
+ + submit: nút button tìm kiếm 
+-![tab form](<Screenshot 2026-04-25 005315.png>)
