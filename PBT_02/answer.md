@@ -95,3 +95,7 @@ Câu A5:
      <img src="product.jpg" alt="iPhone 16 Pro Max 256GB Titan">
      <figcaption>iPhone 16 Pro Max — 25.990.000đ</figcaption>
    </figure>
+
+Câu B1:
+- Tại sao html không thể validate confirm password:
+ + tại vì html chỉ validate từng input riêng lẻ, kể cả khi password và confirm passwork giống nhau đi thì html cũng không có cơ chế so sánh 2 input với nhau nên không biết có giống nhau hay không
