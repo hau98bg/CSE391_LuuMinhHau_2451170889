@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đặt Hàng</title>
+</head>
+
+<body>
+
+    <h1>Form Đặt Hàng Điện Thoại</h1>
+
+    <!-- Giỏ hàng -->
+    <h2>Giỏ hàng</h2>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>iPhone 15</td>
+                <td>20.000.000đ</td>
+                <td>1</td>
+                <td>20.000.000đ</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Samsung Galaxy S24</td>
+                <td>18.000.000đ</td>
+                <td>1</td>
+                <td>18.000.000đ</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Xiaomi 14</td>
+                <td>15.000.000đ</td>
+                <td>2</td>
+                <td>30.000.000đ</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4"><strong>Tổng cộng</strong></td>
+                <td><strong>68.000.000đ</strong></td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br>
+
+    <!--  ouput -->
+    <label>Tổng tiền hiển thị:</label>
+    <output>68.000.000đ</output>
+
+    <br><br>
+
+    <!--  metter -->
+    <label>Điểm tích lũy:</label>
+    <meter value="70" min="0" max="100"></meter>
+
+    <hr>
+
+    <!-- Phần 2 + 3 -->
+    <form>
+
+        <h2>Tìm kiếm sản phẩm</h2>
+
+        <!-- datalist -->
+        <input type="text" list="products" placeholder="Nhập tên sản phẩm">
+
+        <datalist id="products">
+            <option value="iPhone 15">
+            <option value="Samsung Galaxy S24">
+            <option value="Xiaomi 14">
+        </datalist>
+
+        <h2>Thông tin thanh toán</h2>
+
+        <!-- radio -->
+        <p>Phương thức thanh toán:</p>
+
+        <input type="radio" id="cod" name="payment" value="COD">
+        <label for="cod">COD</label>
+
+        <input type="radio" id="bank" name="payment" value="bank">
+        <label for="bank">Chuyển khoản</label>
+
+        <input type="radio" id="wallet" name="payment" value="wallet">
+        <label for="wallet">Ví điện tử</label>
+
+        <br><br>
+
+        <!-- patern -->
+        <label for="coupon">Mã giảm giá:</label>
+
+        <input 
+            type="text"
+            id="coupon"
+            name="coupon"
+            pattern="SALE[0-9]{4}"
+            placeholder="VD: SALE2026">
+
+        <br><br>
+
+        <!-- textarea -->
+        <label for="note">Ghi chú:</label><br>
+
+        <textarea 
+            id="note"
+            name="note"
+            rows="4"
+            cols="40"
+            placeholder="Nhập ghi chú nếu có">
+        </textarea>
+
+        <hr>
+
+        <h2>Thông tin giao hàng</h2>
+
+        <!-- date -->
+        <label for="delivery-date">
+            Ngày giao hàng mong muốn:
+        </label>
+
+        <input 
+            type="date"
+            id="delivery-date"
+            name="delivery-date"
+            min="2026-05-21">
+
+        <br><br>
+
+        <!-- select -->
+        <label for="time-slot">Khung giờ giao hàng:</label>
+
+        <select id="time-slot" name="time-slot">
+            <option>Sáng 8-12h</option>
+            <option>Chiều 14-18h</option>
+            <option>Tối 18-21h</option>
+        </select>
+
+        <br><br>
+
+        <!-- range -->
+        <label for="delivery-time">
+            Thời gian giao hàng (ngày):
+        </label>
+
+        <input 
+            type="range"
+            id="delivery-time"
+            name="delivery-time"
+            min="1"
+            max="7"
+            step="1">
+
+        <br><br>
+
+        <!-- submit -->
+        <button 
+            type="submit"
+            aria-label="Xác nhận đặt hàng">
+
+            Xác nhận đặt hàng
+        </button>
+
+    </form>
+
+</body>
+</html>
