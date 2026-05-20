@@ -211,3 +211,6 @@ Câu C2:
    ++ kiểm tra 2 mật khẩu có giống nhau không( passwork and confirm passwork)
    ++ kiểm tra xem thông tin đã tồn tại hay chưa(email đã tồn tại hay chưa: phải gửi request lên server)    
    ++ Validation logic phức tạp theo điều kiện(ví dụ: patern tĩnh về định dạng số điện thoại của từng quốc gia  )
+  + Hai rủi ro bảo mật nếu chỉ validate Frontend:
+   ++ hacker gửi data giả hoặc mã độc hại(hacker bypass rồi gửi thẳng mã độc lên server)
+   ++ dữ liệu kinh doanh bị thao túng( hacker có thể thay đổi thông tin data ví dụ như sửa giá cả, total money...)
