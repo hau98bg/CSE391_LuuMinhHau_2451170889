@@ -99,3 +99,115 @@ Câu A5:
 Câu B1:
 - Tại sao html không thể validate confirm password:
  + tại vì html chỉ validate từng input riêng lẻ, kể cả khi password và confirm passwork giống nhau đi thì html cũng không có cơ chế so sánh 2 input với nhau nên không biết có giống nhau hay không
+
+Câu C1:
+  + Lỗi 1: Dòng 2 — Input "Tên" không có <label for="...">, vi phạm accessibility
+  + Sửa:
+    <label for="name">Tên:</label>
+    <input type="text" id="name" name="name" required>
+
+
+  + Lỗi 2: Dòng 4 — Input email không có label, chỉ dùng placeholder là chưa đủ cho accessibility
+  + Sửa:
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email của bạn" required>
+
+
+  + Lỗi 3: Dòng 6 — Input mật khẩu không có label
+  + Sửa:
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" required>
+
+
+  + Lỗi 4: Dòng 7 — Ô nhập lại mật khẩu không có label
+  + Sửa:
+    <label for="confirm-password">Nhập lại mật khẩu:</label>
+    <input type="password" id="confirm-password" name="confirm-password" required>
+
+
+  + Lỗi 5: Dòng 9 — Input Phone dùng type="text" thay vì type="tel"
+  + Sửa:
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" value="0901234567">
+
+
+  + Lỗi 6: Dòng 11 — Thẻ <select> không có label
+  + Sửa:
+    <label for="city">Thành phố:</label>
+
+    <select id="city" name="city">
+        <option>Hà Nội</option>
+        <option>TP.HCM</option>
+    </select>
+
+
+ + Lỗi 7: Dòng 16 — Label "Tôi đồng ý điều khoản" không liên kết với checkbox và thiếu checkbox xác nhận
+ + Sửa:
+    <input type="checkbox" id="terms" name="terms" required>
+
+    <label for="terms">
+        Tôi đồng ý điều khoản
+    </label>
+
+
+  + Lỗi 8: Toàn bộ form thiếu thuộc tính method và action, chưa đúng best practices
+  + Sửa:
+    <form action="/submit" method="post">
+ 
+Câu C2:
+ <!-- Form đăng kí cho ngân hàng số -->
+  <form>
+
+      <label for="cccd">CMND/CCCD:</label>
+      <input 
+          type="text"
+          id="cccd"
+          name="cccd"
+          pattern="[0-9]{12}"
+          required>
+
+      <br><br>
+
+      <label for="account">Số tài khoản:</label>
+      <input 
+          type="text"
+          id="account"
+          name="account"
+          pattern="[0-9]{10,15}"
+          required>
+
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input 
+          type="email"
+          id="email"
+          name="email"
+          required>
+
+      <br><br>
+
+      <label for="pin">PIN:</label>
+      <input 
+          type="password"
+          id="pin"
+          name="pin"
+          pattern="[0-9]{6}"
+          required>
+
+  </form>
+
+  <!-- answer question -->
+  + HTML5 validation đủ an toàn cho ứng dụng ngân hàng chưa? Tại sao?
+   => Không đủ an toàn
+   Vì:
+    HTML5 validation chỉ chạy ở phía Frontend (trình duyệt người dùng)
+    Người dùng có thể:
+     -tắt validation
+     -sửa HTML bằng DevTools
+     -gửi request trực tiếp tới server
+     -dùng tool như Postman để bypass form
+  + Liệt kê 3 loại validation mà HTML5 KHÔNG THỂ làm được (phải dùng JavaScript)
+   ++ kiểm tra 2 mật khẩu có giống nhau không( passwork and confirm passwork)
+   ++ kiểm tra xem thông tin đã tồn tại hay chưa(email đã tồn tại hay chưa: phải gửi request lên server)    
+   ++ Validation logic phức tạp theo điều kiện(ví dụ: patern tĩnh về định dạng số điện thoại của từng quốc gia  )
