@@ -1,0 +1,83 @@
+<div id="app">
+    <header class="top-bar dark">
+        <h1>ShopTLU</h1>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/products">Products</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <main>
+        <article class="product">
+            <h2>iPhone 16</h2>
+            <p class="price">25.990.000đ</p>
+            <p>Mô tả sản phẩm...</p>
+        </article>
+        <article class="product featured">
+            <h2>MacBook Pro</h2>
+            <p class="price">45.990.000đ</p>
+            <p>Mô tả sản phẩm...</p>
+        </article>
+    </main>
+</div>
+
+Câu A3: 
+ <!-- inf -->
+ /* Trường hợp 1: content-box (mặc định) */
+    .box-1 {
+        width: 400px;
+        padding: 20px;
+        border: 5px solid black;
+        margin: 10px;
+    }
+    → Chiều rộng hiển thị = 450px
+    → Không gian chiếm trên trang = 470px
+
+    /* Trường hợp 2: border-box */
+    .box-2 {
+        box-sizing: border-box;
+        width: 400px;
+        padding: 20px;
+        border: 5px solid black;
+        margin: 10px;
+    }
+    → Chiều rộng hiển thị = 400px
+    → Kích thước content thực tế = 350px
+    → Không gian chiếm trên trang = 420px
+
+    /* Trường hợp 3: Margin collapse */
+    .box-a { margin-bottom: 25px; }
+    .box-b { margin-top: 40px; }
+    → Khoảng cách giữa box-a và box-b = 40px
+    → Giải thích tại sao KHÔNG PHẢI 65px:
+     =>Do hiện tượng margin collapse.
+        Khi:
+         margin dọc (margin-top, margin-bottom)
+         của 2 block chạm nhau
+        thì browser KHÔNG cộng:
+         25 + 40
+        mà chỉ lấy:
+         margin lớn hơn
+        =>nên kết quả là 40px thay vì 65px.
+    +Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px, khoảng cách = bao nhiêu?
+     => khoảng cách = 30
+
+Câu A4:
+ <!-- question -->
+    Cho các CSS rules sau cùng target 1 element <p class="price" id="main-price">:
+        p { color: black; }                    /* Rule A */
+        .price { color: blue; }               /* Rule B */
+        #main-price { color: red; }           /* Rule C */
+        p.price { color: green; }             /* Rule D */
+ <!-- answer -->
+  specificity score (a, b, c)
+        Rule A: (0, 0, 1) => specificity = 1
+        Rule B: (0, 1, 0) => specificity = 10
+        Rule C: (1, 0, 0) => specificity = 100
+        Rule D: (0, 1, 1) => specificity = 11
+
+     => Rule C sẽ được áp dụng vì có specificity cao nhất (100) -> Màu sắc Element sẽ là đỏ (red).
+  Nếu thêm <p class="price" id="main-price" style="color: orange;">, element có màu gì?
+     => Element sẽ có màu cam (orange) vì inline style có specificity cao nhất (1000) so với các rule khác.   
+  Nếu Rule A thêm !important, element có màu gì? Tại sao?
+     => Element sẽ có màu đen (black) vì !important tăng specificity của Rule A lên rất cao, vượt qua cả inline style và các rule khác.   

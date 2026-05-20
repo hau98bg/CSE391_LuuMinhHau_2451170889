@@ -26,4 +26,43 @@ Câu A1: 3 Cách nhúng CSS
     Inline CSS    ← ⚠️ Chỉ dùng khẩn cấp / override tạm thời
      ++ví dụ: <p style="color: red; font-size: 20px;">Xin chao</p>
      ++ưu/nhược: nhanh gọn/ khó bảo trì, không tái sử dụng được
-                 
+
+ +Câu hỏi thêm: Nếu cùng 1 element có cả 3 cách CSS đồng thời áp dụng, cách nào "thắng"? Giải thích tại sao.
+  ++ Inline CSS sẽ "thắng" :inline gắn trực tiếp vào phần tử nên có độ ưu tiên cao hơn.
+
+Câu A2:
+ + h1=> Chọn: "ShopTLU"
+
+
+ + .price => Chọn:
+  - "25.990.000đ"
+  - "45.990.000đ"
+
+
+ + #app header=> Chọn:
+    <header class="top-bar dark">
+        ...
+    </header>
+
+
+ + nav a:first-child => Chọn: "Home"
+
+
+ + .product.featured h2 => Chọn: "MacBook Pro"
+
+
+ + article > p => Chọn:
+    Trong article thứ nhất:
+    - "25.990.000đ"
+    - "Mô tả sản phẩm..."
+
+    Trong article thứ hai:
+    - "45.990.000đ"
+    - "Mô tả sản phẩm..."
+
+
+ + a[href="/"] => Chọn: "Home"
+
+
+ + .top-bar.dark h1 => Chọn: "ShopTLU"   
+            
