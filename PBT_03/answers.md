@@ -65,4 +65,27 @@ Câu A2:
 
 
  + .top-bar.dark h1 => Chọn: "ShopTLU"   
-            
+
+Câu B1:
+ +Các loại selector đã sử dụng:
+ ++Element selector
+  -body
+  -table
+  -th
+  -td
+  -footer
+
+ ++Class selector
+  -active
+  -profile
+
+ ++ ID selector
+  -#main-header
+
+ ++Descendant selector
+  -nav a
+
+ ++ Pseudo-class selector
+  -nav a:hover
+  -tr:nth-child(even)
+  -tr:hover          
