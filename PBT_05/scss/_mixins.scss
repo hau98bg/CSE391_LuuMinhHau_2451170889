@@ -1,0 +1,17 @@
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin grid($cols, $gap: 10px) {
+    display: grid;
+    grid-template-columns: $cols;
+    gap: $gap;
+}
+
+@mixin respond($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}

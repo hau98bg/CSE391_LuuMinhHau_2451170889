@@ -168,3 +168,11 @@ Ví dụ:
 Cần bước chuyển:
 
 SCSS → compiler (Sass) → CSS → browser
+
+Câu B1:
+![ảnh 375px](./Screenshot_Answer/Screenshot%202026-06-07%20145122.png)
+![ảnh 768px](./Screenshot_Answer/Screenshot%202026-06-07%20145159.png)
+![ảnh 1200px](./Screenshot_Answer/Screenshot%202026-06-07%20145257.png)
+
+Câu B3:
+sass scss/style.scss css/style.css

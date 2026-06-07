@@ -1,0 +1,59 @@
+@import "variables";
+@import "mixins";
+@import "components";
+
+body {
+    font-family: $font-base;
+    font-size: 14px;
+}
+
+/* TABLET */
+@include respond($breakpoint-tablet) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        gap: $spacing-sm;
+    }
+
+    .sidebar {
+        display: block;
+        padding: $spacing-sm;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP */
+@include respond($breakpoint-desktop) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        gap: $spacing-sm;
+        padding: $spacing-sm;
+    }
+
+    .products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .ads {
+        display: block;
+        background: $secondary-bg;
+        padding: $spacing-sm;
+    }
+}

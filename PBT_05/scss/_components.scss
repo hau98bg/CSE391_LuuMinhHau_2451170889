@@ -1,0 +1,39 @@
+.header {
+    @include flex-between;
+    padding: $spacing-sm;
+    background: $primary-bg;
+    color: $text-light;
+
+    .menu {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+.sidebar {
+    display: none;
+}
+
+.ads {
+    display: none;
+}
+
+.products {
+    @include grid(1fr, $spacing-sm);
+    padding: $spacing-sm;
+}
+
+.card {
+    background: $card-bg;
+    padding: $spacing-lg;
+}
+
+.footer {
+    padding: $spacing-lg;
+    text-align: center;
+    background: $primary-bg;
+    color: $text-light;
+}
