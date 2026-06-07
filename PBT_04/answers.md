@@ -124,3 +124,8 @@ Sơ đồ:
 +-----+-----+-----+
 
 Item cuối cùng (item 7) nằm ở hàng 3, cột 1.
+
+Câu B1:
+![ảnh Trạng thái header khi scroll ](/PBT_04/Screenshot_Answer/Screenshot%202026-06-07%20125635.png)
+![ảnh Trạng thái sidebar khi scroll ](/PBT_04/Screenshot_Answer/Screenshot%202026-06-07%20125657.png)
+![ảnh Badge trên card ](/PBT_04/Screenshot_Answer/Screenshot%202026-06-07%20125725.png)
