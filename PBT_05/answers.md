@@ -176,3 +176,27 @@ Câu B1:
 
 Câu B3:
 sass scss/style.scss css/style.css
+
+Câu c1:
+1. Navigation
+Mobile: hamburger menu
+Tablet: rút gọn icon
+Desktop: full menu ngang
+2. Grid content
+Mobile: 1–2 cột
+Tablet: 2–3 cột
+Desktop: 5–6 cột
+3. Elements bị ẩn trên mobile
+Sidebar quảng cáo
+Banner phụ
+Menu text đầy đủ
+4. Font size
+Mobile: nhỏ hơn để fit màn hình
+Desktop: lớn hơn + spacing rộng hơn
+
+![ảnh mobile](./Screenshot_Answer/Screenshot%202026-06-07%20161433.png)
+![ảnh tablet](./Screenshot_Answer/Screenshot%202026-06-07%20161452.png)
+![ảnh desktop](./Screenshot_Answer/Screenshot%202026-06-07%20161531.png)
+![ảnh media queries](./Screenshot_Answer/Screenshot%202026-06-07%20163023.png)
+![ảnh media queries](./Screenshot_Answer/Screenshot%202026-06-07%20163011.png)
+
