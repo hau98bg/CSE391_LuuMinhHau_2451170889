@@ -124,7 +124,22 @@ Bài B3:
 10. #demo.text.highlight → Specificity: (1,2,0)
 
 Element cuối cùng hiển thị màu vàng (gold).
-
 Lý do là rule #demo.text.highlight có specificity cao nhất nên được ưu tiên áp dụng.
-
 Khi thay đổi thứ tự các rule trong file CSS, kết quả thường không đổi vì rule có specificity cao hơn vẫn thắng. Chỉ khi hai rule có cùng specificity thì rule viết sau mới được ưu tiên.
+
+Ảnh : ![ảnh screenshot element](./Screenshot_Answer/Screenshot%202026-06-07%20115950.png)
+
+Câu C1:
+
+Chiều rộng thực tế của sidebar:300 + 20 + 20 + 1 + 1 =342px
+Chiều rộng thực tế của content:
+660 + 30 + 30 + 1 + 1 = 722px
+Tổng chiều rộng:342 + 722 = 1064px
+Container chỉ rộng 960px nên hai khối không đủ chỗ để nằm cùng một hàng. Vì vậy content bị đẩy xuống dòng.
+Cách sửa 1:
+Dùng box-sizing: border-box cho sidebar và content để padding, border được tính vào width.
+Cách sửa 2:
+Giữ content-box nhưng giảm width của các khối sao cho tổng kích thước thực tế không vượt quá 960px.
+
+![ảnh sửa layout](./Screenshot_Answer/Screenshot%202026-06-07%20122244.png)
+
