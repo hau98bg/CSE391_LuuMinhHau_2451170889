@@ -59,3 +59,38 @@ body{
 - Dễ mở rộng lên màn hình lớn hơn
 - Phù hợp xu hướng người dùng dùng mobile nhiều hơn desktop
 - CSS rõ ràng hơn, ít override phức tạp
+
+câu a2 (5đ) — breakpoints
+
+-xs (extra small)
+kích thước: dưới 576px
+thiết bị: điện thoại nhỏ
+lưới sản phẩm: 1 cột
+
+-sm (small)
+kích thước: từ 576px trở lên
+thiết bị: điện thoại lớn
+lưới sản phẩm: 2 cột
+
+-md (medium)
+kích thước: từ 768px trở lên
+thiết bị: tablet
+lưới sản phẩm: 2–3 cột
+
+-lg (large)
+kích thước: từ 992px trở lên
+thiết bị: laptop
+lưới sản phẩm: 3–4 cột
+
+-xl (extra large)
+kích thước: từ 1200px trở lên
+thiết bị: desktop / màn hình lớn
+lưới sản phẩm: 4–5 cột
+
+Câu A3 (5đ)
+
+375px (iPhone SE)  → 100%
+600px              → 540px
+800px              → 720px
+1000px             → 960px
+1400px             → 1140px
