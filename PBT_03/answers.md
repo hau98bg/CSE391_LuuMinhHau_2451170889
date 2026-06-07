@@ -101,3 +101,30 @@ Câu B2:
  +ảnh Chụp screenshot DevTools hiển thị box model diagram cho mỗi hộp (tab Computed).
  ![ảnh conten-box](Screenshot_Answer/Screenshot%202026-06-07%20112559.png)
  ![ảnh borderbox](Screenshot_Answer/Screenshot%202026-06-07%20112635.png)
+
+Bài B3:
+1. p → Specificity: (0,0,1)
+
+2. body p → Specificity: (0,0,2)
+
+3. .text → Specificity: (0,1,0)
+
+4. .highlight → Specificity: (0,1,0)
+
+5. p.text → Specificity: (0,1,1)
+
+6. .text.highlight → Specificity: (0,2,0)
+
+7. body .text.highlight → Specificity: (0,2,1)
+
+8. #demo → Specificity: (1,0,0)
+
+9. p#demo → Specificity: (1,0,1)
+
+10. #demo.text.highlight → Specificity: (1,2,0)
+
+Element cuối cùng hiển thị màu vàng (gold).
+
+Lý do là rule #demo.text.highlight có specificity cao nhất nên được ưu tiên áp dụng.
+
+Khi thay đổi thứ tự các rule trong file CSS, kết quả thường không đổi vì rule có specificity cao hơn vẫn thắng. Chỉ khi hai rule có cùng specificity thì rule viết sau mới được ưu tiên.
