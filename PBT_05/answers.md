@@ -200,3 +200,75 @@ Desktop: lớn hơn + spacing rộng hơn
 ![ảnh media queries](./Screenshot_Answer/Screenshot%202026-06-07%20163023.png)
 ![ảnh media queries](./Screenshot_Answer/Screenshot%202026-06-07%20163011.png)
 
+Câu C2
+ Mã CSS SKELETON:
+ .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    width: 100%;
+    height: 40vh;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.booking-form {
+    width: 100%;
+}
+
+.google-map {
+    width: 100%;
+    height: 250px;
+}
+
+.footer {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking-section {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sidebar-booking {
+        position: sticky;
+        top: 20px;
+        align-self: start;
+    }
+}
