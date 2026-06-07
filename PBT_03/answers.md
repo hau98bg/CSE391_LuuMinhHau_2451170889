@@ -143,3 +143,34 @@ Giữ content-box nhưng giảm width của các khối sao cho tổng kích th�
 
 ![ảnh sửa layout](./Screenshot_Answer/Screenshot%202026-06-07%20122244.png)
 
+Câu C2:
+
+1. "Sản phẩm A" (h2)
+- Font-size: 20px
+- Color: green
+Giải thích:
+Thẻ h2 có class title nên nhận font-size 20px từ .card .title.
+Thẻ này cũng khớp với #featured .title (màu đỏ) và .highlight (màu xanh lá có !important).
+Do !important được ưu tiên nên màu cuối cùng là green.
+
+2. "Mô tả sản phẩm" (p trong card featured)
+- Color: blue
+Giải thích:
+ card có color: blue.
+ card p dùng color: inherit nên kế thừa màu từ .card.
+Vì vậy màu của thẻ p là blue.
+
+3. "Sản phẩm B" (h2)
+- Font-size: 20px
+- Color: blue
+Giải thích:
+Thẻ h2 nhận font-size 20px từ .card .title.
+Không có rule nào đặt màu riêng cho h2 này nên kế thừa màu từ .card là blue.
+
+4. "Mô tả sản phẩm B" (p.highlight)
+- Color: green
+Giải thích:
+Thẻ p có class highlight.
+.highlight đặt color: green !important nên được ưu tiên hơn color: inherit.
+Vì vậy màu cuối cùng là green.
+![ảnh screenshot](./Screenshot_Answer/Screenshot%202026-06-07%20123542.png)
