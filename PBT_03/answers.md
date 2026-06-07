@@ -20,7 +20,7 @@ Câu A1: 3 Cách nhúng CSS
         </style>
     </head>
     
-    ++Ưu/nhược:dễ quản lý, không cần file css/ không tái sử dụng được, trang bị dai nếu css nhiều
+    ++Ưu/nhược: dễ quản lý, không cần file css / không tái sử dụng được, trang bị nặng nếu css nhiều
 
     ↓
     Inline CSS    ← ⚠️ Chỉ dùng khẩn cấp / override tạm thời
@@ -89,3 +89,15 @@ Câu B1:
   -nav a:hover
   -tr:nth-child(even)
   -tr:hover          
+
+Câu B2:
+ +Hộp 1 (content-box): chiều rộng thực tế = 350 px (đo từ DevTools)
+ +Hộp 2 (border-box): chiều rộng thực tế = 300 px (đo từ DevTools)
+ Giải thích sự khác biệt:
+  +Ở content-box thì width chỉ tính phần nội dung nên khi cộng thêm padding và border, kích thước thực tế sẽ lớn hơn 300px.
+
+  +Ở border-box thì padding và border đã nằm trong width nên chiều rộng thực tế vẫn là 300px.
+
+ +ảnh Chụp screenshot DevTools hiển thị box model diagram cho mỗi hộp (tab Computed).
+ ![ảnh conten-box](Screenshot_Answer/Screenshot%202026-06-07%20112559.png)
+ ![ảnh borderbox](Screenshot_Answer/Screenshot%202026-06-07%20112635.png)
