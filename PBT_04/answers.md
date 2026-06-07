@@ -129,3 +129,30 @@ Câu B1:
 ![ảnh Trạng thái header khi scroll ](/PBT_04/Screenshot_Answer/Screenshot%202026-06-07%20125635.png)
 ![ảnh Trạng thái sidebar khi scroll ](/PBT_04/Screenshot_Answer/Screenshot%202026-06-07%20125657.png)
 ![ảnh Badge trên card ](/PBT_04/Screenshot_Answer/Screenshot%202026-06-07%20125725.png)
+
+Câu C1
+
+1. Navigation bar ngang (logo + menu + buttons)
+- Flexbox
+Giải thích:
+Flexbox phù hợp với bố cục 1 chiều theo hàng ngang và dễ căn chỉnh khoảng cách giữa các phần tử.
+
+2. Lưới ảnh Instagram (3 cột đều nhau, số ảnh không biết trước)
+- Grid
+Giải thích:
+Grid phù hợp với bố cục dạng hàng và cột. Dễ tạo lưới ảnh đều nhau.
+
+3. Layout blog: main content + sidebar
+- Grid
+Giải thích:
+Grid giúp chia bố cục thành các cột rõ ràng như content và sidebar.
+
+4. Footer với 4 cột thông tin (Về chúng tôi, Liên kết, Hỗ trợ, Liên hệ)
+- Grid
+Giải thích:
+Grid giúp chia đều 4 cột và quản lý bố cục dễ dàng.
+
+5. Card sản phẩm (ảnh trên, text giữa, nút dưới — nút luôn dính đáy)
+- Flexbox
+Giải thích:
+Flexbox theo chiều dọc giúp sắp xếp nội dung trong card và dùng margin-top: auto để đẩy nút xuống đáy.
