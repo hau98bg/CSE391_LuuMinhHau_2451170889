@@ -1,39 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Model Lab</title>
     <link rel="stylesheet" href="boxmodel.css">
 </head>
 <body>
-
-    <h2>Part 1</h2>
-
-    <div class="box-wrap">
-        <div class="box content-box">
-            Content Box
-        </div>
-
-        <div class="box border-box">
-            Border Box
-        </div>
+    <h2 class="section-title">Phần 1: content-box vs border-box</h2>
+    <div class="p1-container">
+        <div class="box-content">Hộp 1: Content Box</div>
+        <div class="box-border">Hộp 2: Border Box</div>
     </div>
 
-    <h2>Part 2</h2>
+    <hr>
 
-    <div class="layout">
-        <div class="sidebar">
-            Sidebar
-        </div>
-
-        <div class="content">
-            Content
-        </div>
-
-        <div class="ads">
-            Ads
-        </div>
+    <h2 class="section-title">Phần 2: Layout 3 Cột (Container 1000px)</h2>
+    <div class="p2-container">
+        <div class="sidebar-left">Sidebar Trái (250px)</div>
+        <div class="content-center">Nội dung chính (500px)</div>
+        <div class="sidebar-right">Quảng cáo (250px)</div>
     </div>
-
 </body>
 </html>
