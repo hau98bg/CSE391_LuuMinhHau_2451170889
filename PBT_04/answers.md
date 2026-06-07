@@ -46,3 +46,81 @@ Giải thích khái niệm "nearest positioned ancestor":
 - Nearest positioned ancestor là phần tử tổ tiên gần nhất có thuộc tính position khác static.
 - Đây là phần tử được absolute dùng làm mốc để tính các thuộc tính top, left, right, bottom.
 
+Câu A2
+
+1. Trường hợp 1
+
+Bố cục:
+- 1 hàng
+- 4 cột bằng nhau
+
+Sơ đồ:
+
++-----+-----+-----+-----+
+|  1  |  2  |  3  |  4  |
++-----+-----+-----+-----+
+
+2. Trường hợp 2
+
+Bố cục:
+- 3 hàng
+- 2 cột
+
+Sơ đồ:
+
++-----+-----+
+|  1  |  2  |
++-----+-----+
+|  3  |  4  |
++-----+-----+
+|  5  |  6  |
++-----+-----+
+
+3. Trường hợp 3
+
+Bố cục:
+- 1 hàng
+- Item 1 ở bên trái
+- Item 2 ở giữa
+- Item 3 ở bên phải
+- Các item căn giữa theo chiều dọc
+
+Sơ đồ:
+
++---------------------------+
+|  1        2          3    |
++---------------------------+
+
+4. Trường hợp 4
+
+Bố cục:
+- 1 hàng
+- 3 cột
+- Cột 1 rộng 200px
+- Cột 2 chiếm phần còn lại
+- Cột 3 rộng 200px
+
+Sơ đồ:
+
++--------+----------------+--------+
+|   1    |       2        |   3    |
++--------+----------------+--------+
+
+5. Trường hợp 5
+
+Bố cục:
+- 3 cột
+- 3 hàng
+- Item 7 nằm ở hàng cuối cùng
+
+Sơ đồ:
+
++-----+-----+-----+
+|  1  |  2  |  3  |
++-----+-----+-----+
+|  4  |  5  |  6  |
++-----+-----+-----+
+|  7  |     |     |
++-----+-----+-----+
+
+Item cuối cùng (item 7) nằm ở hàng 3, cột 1.
