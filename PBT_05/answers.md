@@ -94,3 +94,77 @@ Câu A3 (5đ)
 800px              → 720px
 1000px             → 960px
 1400px             → 1140px
+
+Câu A4 (5đ)
+
+1. Variables ($primary-color)
+
+SCSS cho phép tạo biến để tái sử dụng giá trị.
+
+Ví dụ:
+$primary-color: blue;
+
+button{
+    background: $primary-color;
+}
+
+--------------------------------------------------
+
+2. Nesting (CSS lồng nhau)
+
+Cho phép viết CSS theo cấu trúc giống HTML.
+
+Ví dụ:
+nav{
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+    }
+}
+
+--------------------------------------------------
+
+3. Mixins (@mixin, @include)
+
+Dùng để tái sử dụng đoạn CSS nhiều lần.
+
+Ví dụ:
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    @include center;
+}
+
+--------------------------------------------------
+
+4. @extend / Inheritance
+
+Cho phép kế thừa style từ selector khác.
+
+Ví dụ:
+.btn{
+    padding: 10px;
+    border: none;
+}
+
+.btn-primary{
+    @extend .btn;
+    background: blue;
+}
+
+--------------------------------------------------
+
+5. Vì sao browser không đọc được .scss?
+
+- Trình duyệt chỉ hiểu CSS thuần (plain CSS)
+- SCSS là ngôn ngữ tiền xử lý (preprocessor)
+
+Cần bước chuyển:
+
+SCSS → compiler (Sass) → CSS → browser
