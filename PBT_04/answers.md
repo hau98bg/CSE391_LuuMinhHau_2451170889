@@ -156,3 +156,62 @@ Grid giúp chia đều 4 cột và quản lý bố cục dễ dàng.
 - Flexbox
 Giải thích:
 Flexbox theo chiều dọc giúp sắp xếp nội dung trong card và dùng margin-top: auto để đẩy nút xuống đáy.
+
+Câu C2
+
+1. Lỗi 1: Cards không đều chiều cao — nút "Mua" bị nhảy lên/xuống
+ ![ảnh lỗi](./Screenshot_Answer/Screenshot%202026-06-07%20140950.png)
+Nguyên nhân:
+Các card có lượng nội dung khác nhau nên chiều cao khác nhau. Nút "Mua" nằm ngay sau nội dung nên vị trí không đồng đều.
+
+Code sửa:
+
+.card{
+    width: 30%;
+    margin: 1.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .btn{
+    margin-top: auto;
+}
+
+![ảnh sau khi sửa](./Screenshot_Answer/Screenshot%202026-06-07%20141018.png)
+2. Lỗi 2: Muốn items nằm giữa cả ngang lẫn dọc trong container 100vh, nhưng item vẫn dính góc trái trên
+![ảnh lỗi](./Screenshot_Answer/Screenshot%202026-06-07%20141105.png)
+Nguyên nhân:
+Container đã dùng display: flex nhưng chưa căn giữa theo trục ngang và trục dọc.
+
+Code sửa:
+
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content{
+    text-align: center;
+}
+![ảnh sau khi sửa](./Screenshot_Answer/Screenshot%202026-06-07%20141321.png)
+3. Lỗi 3: Sidebar bị co lại khi content quá dài
+![ảnh lỗi](./Screenshot_Answer/Screenshot%202026-06-07%20141608.png)
+Nguyên nhân:
+Flexbox mặc định cho phép các phần tử co lại để vừa container nên sidebar có thể bị thu hẹp.
+
+Code sửa:
+
+.layout{
+    display: flex;
+}
+
+.sidebar{
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.content{
+    flex: 1;
+}
